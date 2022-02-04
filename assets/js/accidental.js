@@ -113,7 +113,8 @@ function addFileToList(fileObject, fileName) {
 
 let cleartime = null;
 function timer(lowerVal, UpperVal) {
-
+  console.log('condition 1 of 1')
+  console.log(lowerVal,UpperVal, 'Lower, upper')
   var random = 1
   return new Promise((resolve, reject) => {
     var i = lowerVal
@@ -2126,11 +2127,12 @@ function finalSubmitCall() {
       })
     }), '*');
     timer(2, 85).then(async () => {
+      console.log('condition1')
     })
   })
 
   window.addEventListener('message', function (eventData) {
-
+    console.log('condition2')
     try {
 
       if (eventData.data) {
@@ -2140,7 +2142,7 @@ function finalSubmitCall() {
           clearTimeout(cleartime);
           console.log('upload success event received')
           timer(85, 95).then(async () => {
-
+            console.log('condition3')
 
           })
 
