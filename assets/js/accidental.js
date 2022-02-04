@@ -2127,10 +2127,12 @@ function finalSubmitCall() {
       })
     }), '*');
     console.log('Initial condition')
-    timer(2, 85).then(async () => {
-      console.log('condition1')
-      resolve();
-    })
+    // timer(2, 85).then(async () => {
+    //   console.log('condition1')
+    // })
+    timer(2, 85);
+    console.log('condition1')
+
   })
 
   window.addEventListener('message', function (eventData) {
