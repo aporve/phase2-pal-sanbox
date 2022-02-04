@@ -3214,6 +3214,7 @@ function submitOtp() {
         if (event.event_code == 'validationResponse') { //sucess
           console.log(event.data)
           if (event.data.returnCode == '0' || event.data.retCode == '0') {
+            console.log('under 0 condition====')
             document.getElementById("back_btn1").style.display = "none";
             // document.getElementById("back_btn1").disabled = true;
             $('#invalidOtp').modal('hide');
