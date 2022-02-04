@@ -2129,6 +2129,7 @@ function finalSubmitCall() {
     console.log('Initial condition')
     timer(2, 85).then(async () => {
       console.log('condition1')
+      resolve();
     })
   })
 
