@@ -2134,6 +2134,7 @@ function finalSubmitCall() {
   })
 
   window.addEventListener('message', function (eventData) {
+    console.log(eventData, 'Event Data1')
     console.log('condition2')
     try {
 
@@ -2161,14 +2162,14 @@ function finalSubmitCall() {
   })
 
   window.addEventListener('message', function (eventData) {
+    console.log(eventData, 'Event Data2')
 
 
-    // console.log(event.data.event_code)
     try {
 
       if (eventData.data) {
         let event = JSON.parse(eventData.data);
-        console.log(event)
+        console.log(event, 'Event')
         if (event.event_code == 'finalSubmitResponse') { //sucess
           clearTimeout(cleartime);
           console.log('finalsubmit event received')
@@ -2193,6 +2194,7 @@ function finalSubmitCall() {
 
           }
           else {
+            console.log('In else Event Data 2')
             // alert(event.data.returnMessage + 'returnCode not 0 ')
             document.getElementById('returnMessage').innerHTML = event.data.returnMessage;
             $("#invalidReturnCode").modal("show");
